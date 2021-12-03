@@ -1,5 +1,4 @@
-import * as fs from 'fs'
-import * as path from 'path'
+import { useFile } from './help'
 
 const inputTransformer = (input: string): [string, number] => {
 	const [direction, valueString] = input.split(' ')
@@ -13,9 +12,7 @@ const inputTransformer = (input: string): [string, number] => {
 			return ['y', -value]
 	}
 }
-
-const inputFile = fs.readFileSync(path.join(process.cwd(), './src/inputs/2.txt'))
-const inputs = inputFile.toString().split('\n').map(inputTransformer)
+const inputs = useFile('2.txt').split('\n').map(inputTransformer)
 
 const position = { y: 0, z: 0 }
 

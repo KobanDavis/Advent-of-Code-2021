@@ -1,8 +1,6 @@
-import * as fs from 'fs'
-import * as path from 'path'
+import { useFile } from './help'
 
-const inputFile = fs.readFileSync(path.join(process.cwd(), './src/inputs/1.txt'))
-const inputs = inputFile.toString().split('\n').map(Number)
+const inputs = useFile('1.txt').split('\n').map(Number)
 
 let last = null
 let increments = 0
