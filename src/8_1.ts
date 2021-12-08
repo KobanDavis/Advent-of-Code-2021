@@ -6,6 +6,5 @@ const inputs = useFile('8.txt')
 
 // [1,4,7,8]
 const lengths = new Set([2, 4, 3, 7])
-const occurances = inputs.reduce((total, input) => (lengths.has(input.length) ? total + 1 : total), 0)
-
-console.log(inputs, occurances)
+const occurrences = inputs.reduce((total, input) => (lengths.has(input.length) ? total + 1 : total), 0)
+console.log(inputs, occurrences)

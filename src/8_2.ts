@@ -15,12 +15,12 @@ let outputs = inputRows.map((row) =>
 		.map((number) => number.split(''))
 )
 
-// 2 -> 1
-// 3 -> 7
-// 4 -> 4
-// 5 -> 2, 3, 5
-// 6 -> 6, 9, 0
-// 7 -> 8
+// len 2 -> 1
+// len 3 -> 7
+// len 4 -> 4
+// len 5 -> 2, 3, 5
+// len 6 -> 6, 9, 0
+// len 7 -> 8
 
 const solveSignals = (input: string[][]) => {
 	const numberMap = new Map<number, string[]>()
@@ -93,7 +93,7 @@ for (let i = 0; i < inputs.length; i++) {
 			// console.log(string, stringMap)
 			return total + stringMap[string].toString()
 		}, '')
-	console.log(value)
+
 	total += Number(value)
 }
 
